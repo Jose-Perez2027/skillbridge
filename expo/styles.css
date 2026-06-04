@@ -1,0 +1,486 @@
+/* --- Estilos Globales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 15px 50px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 450px;
+    /* Imagen de stock similar a la de tu mockup */
+    background-image: url('https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura para legibilidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+}
+
+/* --- Welcome Section --- */
+.welcome {
+    text-align: center;
+    padding: 50px 20px 30px 20px;
+}
+
+.welcome h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.welcome-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-blue {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-outline {
+    background-color: white;
+    color: #0056b3;
+    border: 1px solid #dcdcdc;
+    padding: 12px 35px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-blue:hover { background-color: #004085; }
+.btn-outline:hover { background-color: #f0f0f0; }
+
+/* --- Cards Container --- */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 50px 60px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- Estilos Base Existentes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: font-size 0.2s ease, background-color 0.3s ease;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 15px 50px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 0.95rem;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero {
+    height: 450px;
+    background-image: url('https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.welcome {
+    text-align: center;
+    padding: 50px 20px 30px 20px;
+}
+
+.welcome h2 { font-size: 2.2rem; margin-bottom: 10px; color: #000; }
+.welcome p { font-size: 1.2rem; color: #444; margin-bottom: 25px; }
+
+.welcome-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-blue {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-outline {
+    background-color: white;
+    color: #0056b3;
+    border: 1px solid #dcdcdc;
+    padding: 12px 35px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 50px 60px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ==========================================
+   NUEVOS ESTILOS: MENÚ DE ACCESIBILIDAD 
+============================================= */
+
+.acc-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border: 2px solid #0056b3;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Clase utilitaria para ocultar el menú */
+.hidden {
+    display: none !important;
+}
+
+.acc-menu h3 {
+    font-size: 1.1rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.acc-menu hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.menu-item {
+    display: block;
+    width: 100%;
+    background: #f0f4f8;
+    color: #333;
+    border: none;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.menu-item:hover {
+    background-color: #d1e3f8;
+}
+
+.btn-close {
+    display: block;
+    width: 100%;
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-close:hover { background-color: #444; }
+
+
+/* ==========================================
+   ESTADOS DE ACCESIBILIDAD INTERCAMBIABLES
+============================================= */
+
+/* 1. Fuente más grande a nivel global */
+body.large-text {
+    font-size: 120%;
+}
+body.large-text .nav-links a { font-size: 1.1rem; }
+body.large-text .welcome h2 { font-size: 2.6rem; }
+
+/* 2. Alto Contraste */
+body.high-contrast {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+body.high-contrast .navbar { background-color: #000; border-bottom: 2px solid yellow; }
+body.high-contrast .welcome h2, body.high-contrast .welcome p { color: #fff; }
+body.high-contrast .btn-blue, body.high-contrast .btn-primary { background-color: yellow; color: black; }
+
+/* 3. Fuente para personas con Dislexia (Comic Sans o similar sans-serif amigable) */
+body.dyslexia-font * {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif !important;
+}
+.main-footer {
+    background-color: #1e293b; /* Gris azulado oscuro profesional */
+    color: #cbd5e1;
+    padding: 40px 50px 20px 50px;
+    margin-top: 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-brand {
+    font-size: 1.1rem;
+}
+
+.footer-brand strong {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #94a3b8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #334155;
+    margin: 25px 0 15px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    gap: 15px;
+}
+
+.footer-legal a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-legal a:hover {
+    color: #fff;
+}
+
+/* ==========================================
+   ADAPTACIÓN DEL FOOTER A LA ACCESIBILIDAD
+============================================= */
+body.large-text .main-footer a { 
+    font-size: 1.1rem; 
+}
+
+body.high-contrast .main-footer { 
+    background-color: #000; 
+    border-top: 2px solid yellow; 
+}
+body.high-contrast .main-footer strong, 
+body.high-contrast .main-footer a { 
+    color: yellow !important; 
+}
+body.high-contrast .main-footer p { 
+    color: #fff !important; 
+}
