@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge</title>
+
+<link rel="stylesheet" href="style-menus.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <i class="fa-solid fa-bridge"></i>
+        <span>SkillBridge</span>
+    </div>
+
+    <nav>
+        <a href="#">Empleos</a>
+        <a href="#">Perfil</a>
+        <a href="#">¿Quiénes somos?</a>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </nav>
+
+</header>
+
+<section class="hero">
+    <div class="overlay">
+        <h1>¡Encuentra tu trabajo ideal aquí!</h1>
+        <button>Buscar empleo</button>
+    </div>
+</section>
+
+<section class="categorias">
+
+    <div class="card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Trabajos locales</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-file-lines"></i>
+        <h3>Administración</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-hospital"></i>
+        <h3>Hospitalidad</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-truck"></i>
+        <h3>Transporte</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Servicio al cliente</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h3>Trabajo manual</h3>
+    </div>
+
+</section>
+
+<footer class="footer-principal">
+
+    <div class="footer-contenido">
+
+        <div>
+            <h2>Encuentra tu trabajo ideal</h2>
+            <p>Conecta con nuevas oportunidades laborales de forma rápida y sencilla.</p>
+            <button>Ver más</button>
+        </div>
+
+        <div>
+            <h4>Información</h4>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Empleos</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <div>
+            <h4>Categorías</h4>
+            <a href="#">Administración</a>
+            <a href="#">Hospitalidad</a>
+            <a href="#">Transporte</a>
+        </div>
+
+        <div class="suscribirse">
+            <h4>Suscríbete</h4>
+            <input type="email" placeholder="Correo electrónico">
+            <button>Enviar</button>
+        </div>
+
+    </div>
+
+</footer>
+
+<footer class="footer-final">
+    © 2026 SkillBridge - Todos los derechos reservados
+</footer>
+
+<div class="panel-accesibilidad">
+    <h3>Accesibilidad</h3>
+    <button>🔎 Aumentar texto</button>
+    <button>🔍 Disminuir texto</button>
+    <button>🌈 Alto contraste</button>
+    <button>🌙 Modo oscuro</button>
+    <button>📖 Leer página</button>
+</div>
+
+</body>
+</html>
