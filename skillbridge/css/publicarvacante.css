@@ -1,0 +1,371 @@
+/* =======================================================
+   PUBLICAR VACANTE | SKILLBRIDGE
+   Este archivo solo estiliza publicar-vacante.php
+======================================================= */
+
+/* HERO */
+
+.publish-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 58px 0 68px;
+    background:
+        radial-gradient(circle at 10% 18%, rgba(7, 95, 211, 0.12), transparent 23%),
+        radial-gradient(circle at 90% 12%, rgba(122, 90, 248, 0.10), transparent 24%),
+        var(--background);
+}
+
+.publish-page-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 30px;
+    color: var(--text-medium);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.breadcrumb a {
+    color: var(--primary);
+}
+
+.breadcrumb i {
+    color: var(--text-light);
+    font-size: 0.7rem;
+}
+
+.publish-hero-text {
+    max-width: 850px;
+}
+
+.publish-hero-text h1 {
+    margin-top: 14px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: clamp(2.35rem, 4.4vw, 4.1rem);
+    line-height: 1.08;
+    letter-spacing: -1.4px;
+}
+
+.publish-hero-text p {
+    max-width: 720px;
+    margin-top: 20px;
+    color: var(--text-medium);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* CONTENIDO */
+
+.publish-content-section {
+    padding: 78px 0 90px;
+    background: var(--white);
+}
+
+.publish-layout {
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    gap: 28px;
+    align-items: start;
+}
+
+/* COLUMNA DE INFORMACIÓN */
+
+.publish-info {
+    display: grid;
+    gap: 18px;
+    position: sticky;
+    top: 105px;
+}
+
+.publish-info-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: var(--background);
+    box-shadow: var(--shadow-small, 0 10px 28px rgba(20, 33, 61, 0.06));
+    transition: 0.3s ease;
+}
+
+.publish-info-card:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+    box-shadow: var(--shadow-medium, 0 18px 42px rgba(20, 33, 61, 0.09));
+}
+
+.publish-info-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 1.15rem;
+}
+
+.publish-info-card h3 {
+    margin-top: 18px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+}
+
+.publish-info-card p {
+    margin-top: 9px;
+    color: var(--text-medium);
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+/* TARJETA DEL FORMULARIO */
+
+.publish-card {
+    padding: 34px;
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    background: var(--white);
+    box-shadow: var(--shadow-medium, 0 18px 45px rgba(20, 33, 61, 0.08));
+}
+
+.publish-card-header {
+    margin-bottom: 28px;
+}
+
+.publish-card-header h2 {
+    margin-top: 12px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: clamp(1.8rem, 3vw, 2.35rem);
+}
+
+.publish-card-header p {
+    margin-top: 8px;
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+/* ALERTAS */
+
+.form-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    font-size: 0.86rem;
+    font-weight: 800;
+}
+
+.form-alert.success {
+    border: 1px solid #bfe8d5;
+    background: #e9f8f1;
+    color: var(--green);
+}
+
+.form-alert.error {
+    border: 1px solid #ffd0d0;
+    background: #fff0f0;
+    color: #d64545;
+}
+
+.form-alert i {
+    margin-top: 2px;
+}
+
+/* FORMULARIO */
+
+.publish-form {
+    width: 100%;
+}
+
+.publish-form-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 18px;
+    padding-top: 8px;
+    color: var(--primary);
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.publish-form-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.publish-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.publish-form-group {
+    margin-bottom: 18px;
+}
+
+.publish-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 0.84rem;
+    font-weight: 800;
+}
+
+.publish-form-group input,
+.publish-form-group select,
+.publish-form-group textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #fbfdff;
+    padding: 14px 15px;
+    color: var(--text-dark);
+    font-family: var(--font-main);
+    font-size: 0.92rem;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.publish-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.publish-form-group input::placeholder,
+.publish-form-group textarea::placeholder {
+    color: var(--text-light);
+}
+
+.publish-form-group input:focus,
+.publish-form-group select:focus,
+.publish-form-group textarea:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(7, 95, 211, 0.10);
+}
+
+.publish-form-group input.input-error,
+.publish-form-group select.input-error,
+.publish-form-group textarea.input-error {
+    border-color: #d64545;
+    background: #fff7f7;
+    box-shadow: 0 0 0 4px rgba(214, 69, 69, 0.10);
+}
+
+.publish-button {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* MODO OSCURO */
+
+body.dark-mode .publish-content-section {
+    background: #14233b;
+}
+
+body.dark-mode .publish-card,
+body.dark-mode .publish-info-card {
+    background: var(--white);
+}
+
+body.dark-mode .publish-form-group input,
+body.dark-mode .publish-form-group select,
+body.dark-mode .publish-form-group textarea {
+    background: #f8fbff;
+}
+
+/* ALTO CONTRASTE */
+
+body.high-contrast .publish-page-hero,
+body.high-contrast .publish-content-section {
+    background: #000000;
+}
+
+body.high-contrast .publish-card,
+body.high-contrast .publish-info-card {
+    border-color: #ffffff;
+    background: #000000;
+}
+
+body.high-contrast .publish-card h2,
+body.high-contrast .publish-info-card h3,
+body.high-contrast .publish-form-group label,
+body.high-contrast .publish-hero-text h1 {
+    color: #ffffff;
+}
+
+body.high-contrast .publish-card p,
+body.high-contrast .publish-info-card p,
+body.high-contrast .publish-hero-text p {
+    color: #ffffff;
+}
+
+body.high-contrast .publish-form-group input,
+body.high-contrast .publish-form-group select,
+body.high-contrast .publish-form-group textarea {
+    border-color: #ffffff;
+    background: #000000;
+    color: #ffffff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+    .publish-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .publish-info {
+        position: static;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .publish-info {
+        grid-template-columns: 1fr;
+    }
+
+    .publish-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .publish-card {
+        padding: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    .publish-page-hero {
+        padding: 48px 0 58px;
+    }
+
+    .publish-hero-text {
+        text-align: center;
+    }
+
+    .breadcrumb {
+        justify-content: center;
+    }
+
+    .publish-hero-text h1 {
+        font-size: 2.25rem;
+    }
+
+    .publish-card {
+        padding: 22px;
+        border-radius: 22px;
+    }
+}

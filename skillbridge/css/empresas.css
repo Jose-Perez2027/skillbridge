@@ -1,0 +1,482 @@
+/* =======================================================
+   EMPRESAS | SKILLBRIDGE
+   Este archivo solo estiliza el contenido de empresas.php
+======================================================= */
+
+/* HERO DE EMPRESAS */
+
+.companies-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 62px 0 74px;
+    background:
+        radial-gradient(circle at 8% 20%, rgba(7, 95, 211, 0.11), transparent 22%),
+        radial-gradient(circle at 92% 15%, rgba(122, 90, 248, 0.10), transparent 24%),
+        var(--background);
+}
+
+.companies-page-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.companies-hero-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.55;
+}
+
+.companies-hero-shape-one {
+    top: 55px;
+    right: 8%;
+    width: 210px;
+    height: 210px;
+    border: 1px dashed rgba(7, 95, 211, 0.35);
+}
+
+.companies-hero-shape-two {
+    left: 4%;
+    bottom: -60px;
+    width: 170px;
+    height: 170px;
+    background: rgba(122, 90, 248, 0.09);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 30px;
+    color: var(--text-medium);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.breadcrumb a {
+    color: var(--primary);
+}
+
+.breadcrumb i {
+    color: var(--text-light);
+    font-size: 0.7rem;
+}
+
+.companies-hero-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    align-items: center;
+    gap: 52px;
+}
+
+.companies-hero-text h1 {
+    max-width: 720px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: clamp(2.45rem, 4.3vw, 4.15rem);
+    line-height: 1.07;
+    letter-spacing: -1.4px;
+}
+
+.companies-hero-text p {
+    max-width: 640px;
+    margin-top: 22px;
+    color: var(--text-medium);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.companies-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.companies-hero-card {
+    display: grid;
+    gap: 16px;
+}
+
+.companies-mini-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: var(--shadow-small);
+    transition: 0.25s ease;
+}
+
+.companies-mini-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.companies-mini-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.companies-mini-card strong {
+    display: block;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: 1rem;
+}
+
+.companies-mini-card span {
+    display: block;
+    margin-top: 5px;
+    color: var(--text-medium);
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+/* BENEFICIOS */
+
+.companies-benefits-section {
+    padding: 78px 0;
+    background: var(--white);
+}
+
+.companies-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.company-benefit-card {
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--background);
+    box-shadow: var(--shadow-small);
+    transition: 0.3s ease;
+}
+
+.company-benefit-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(7, 95, 211, 0.25);
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+}
+
+.company-benefit-icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    font-size: 1.25rem;
+}
+
+.company-benefit-blue {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.company-benefit-purple {
+    background: var(--purple-light);
+    color: var(--purple);
+}
+
+.company-benefit-green {
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.company-benefit-card h3 {
+    margin-top: 20px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+}
+
+.company-benefit-card p {
+    margin-top: 10px;
+    color: var(--text-medium);
+    font-size: 0.86rem;
+    line-height: 1.7;
+}
+
+/* EMPRESAS ALIADAS */
+
+.companies-list-section {
+    padding: 82px 0;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.company-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: var(--shadow-small);
+    transition: 0.3s ease;
+}
+
+.company-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(7, 95, 211, 0.25);
+    box-shadow: var(--shadow-medium);
+}
+
+.company-logo-letter {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--primary), var(--purple));
+    color: white;
+    font-family: var(--font-title);
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.company-info h3 {
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: 1.22rem;
+}
+
+.company-slogan {
+    margin-top: 5px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.company-description {
+    margin-top: 10px;
+    color: var(--text-medium);
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
+.company-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.company-meta span {
+    color: var(--text-medium);
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.company-meta i {
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+.company-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    padding-top: 17px;
+    border-top: 1px solid var(--border);
+}
+
+.vacancies-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+/* PROCESO */
+
+.companies-process-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.companies-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.company-step-card {
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--background);
+    box-shadow: var(--shadow-small);
+    transition: 0.3s ease;
+}
+
+.company-step-card:hover {
+    transform: translateY(-7px);
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+}
+
+.company-step-card span {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.company-step-card h3 {
+    margin-top: 18px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+}
+
+.company-step-card p {
+    margin-top: 9px;
+    color: var(--text-medium);
+    font-size: 0.84rem;
+    line-height: 1.65;
+}
+
+/* CTA */
+
+.companies-cta-section {
+    padding: 72px 0;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.18), transparent 15%),
+        linear-gradient(135deg, var(--primary), #0d4eaa);
+    color: white;
+}
+
+.companies-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 38px;
+}
+
+.companies-cta-content h2 {
+    max-width: 650px;
+    color: white;
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.15;
+}
+
+.companies-cta-content p {
+    max-width: 660px;
+    margin-top: 16px;
+    color: #d7e8ff;
+    line-height: 1.8;
+}
+
+.companies-cta-content .button {
+    flex-shrink: 0;
+}
+
+/* MODO OSCURO */
+
+body.dark-mode .companies-benefits-section,
+body.dark-mode .companies-process-section {
+    background: #14233b;
+}
+
+body.dark-mode .company-benefit-card,
+body.dark-mode .company-step-card {
+    background: var(--white);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+    .companies-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .companies-hero-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .companies-benefits-grid,
+    .companies-steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .companies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .companies-page-hero {
+        padding: 48px 0 62px;
+    }
+
+    .companies-hero-text {
+        text-align: center;
+    }
+
+    .companies-hero-text p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .companies-hero-buttons {
+        justify-content: center;
+    }
+
+    .companies-hero-card {
+        grid-template-columns: 1fr;
+    }
+
+    .companies-cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .companies-hero-text h1 {
+        font-size: 2.35rem;
+    }
+
+    .company-card {
+        flex-direction: column;
+    }
+
+    .companies-hero-buttons,
+    .companies-hero-buttons .button,
+    .companies-cta-content .button {
+        width: 100%;
+    }
+}
