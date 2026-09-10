@@ -1,0 +1,39 @@
+AUDITORÍA FINAL SKILLBRIDGE
+============================
+Base revisada: skillbridge1.zip enviado por el usuario.
+Resultado: se reforzó la traducción EN/ES y accesibilidad sobre la versión real del proyecto.
+
+Archivos clave modificados:
+- java/java.js
+- css/style.css
+- empresas.php
+- login.php
+
+Traducción:
+- Textos estáticos detectados en PHP: 739
+- Textos funcionales agregados/reforzados en el diccionario EN/ES.
+- Textos no traducidos intencionalmente: marcas, nombres propios, iniciales y placeholders ya escritos en español.
+- Restantes detectados por el auditor automático: 10
+  * A
+  * Bridge
+  * Ejemplo: HTML | CSS | JavaScript | Git
+  * J
+  * M
+  * San Salvador
+  * Skill
+  * SKILLBRIDGE
+  * SkillBridge
+  * TechNova El Salvador
+
+Accesibilidad:
+- Read mode por hover y focus.
+- No bloquea enlaces ni botones.
+- No encierra visualmente el texto al leer.
+- Reset no cambia el idioma.
+- Preferencias se guardan en localStorage y, si hay sesión activa, en api/preferencias.php.
+- Iconos Font Awesome detectados: 92
+- Los iconos reciben aria-label/title y fallback de lectura aunque no estén en la lista manual.
+
+Pruebas técnicas realizadas:
+- node --check java/java.js: OK
+- php -l en archivos PHP: OK

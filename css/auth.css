@@ -1,0 +1,843 @@
+/* =======================================================
+   AUTH PAGES - REGISTRO Y LOGIN | SKILLBRIDGE
+======================================================= */
+
+.auth-body {
+    background:
+        radial-gradient(circle at 10% 12%, rgba(7, 95, 211, 0.08), transparent 25%),
+        radial-gradient(circle at 90% 10%, rgba(122, 90, 248, 0.08), transparent 22%),
+        var(--background);
+}
+
+/* CONTENEDOR GENERAL */
+
+.auth-container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+    padding: 62px 0 80px;
+}
+
+.auth-split-wrapper {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+}
+
+/* LADO IZQUIERDO DEL REGISTRO */
+
+.auth-sidebar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 620px;
+    padding: 44px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 20%),
+        linear-gradient(135deg, var(--primary), #0d4eaa);
+    color: white;
+}
+
+.auth-sidebar::before {
+    position: absolute;
+    right: -90px;
+    bottom: -90px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    content: "";
+}
+
+.auth-sidebar::after {
+    position: absolute;
+    top: 42px;
+    right: 45px;
+    width: 80px;
+    height: 80px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.13);
+    transform: rotate(12deg);
+    content: "";
+}
+
+.sidebar-content {
+    position: relative;
+    z-index: 1;
+}
+
+.auth-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #eaf4ff;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.auth-sidebar h1 {
+    margin-top: 24px;
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -1px;
+}
+
+.auth-sidebar p {
+    max-width: 470px;
+    margin-top: 20px;
+    color: #d7e8ff;
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.sidebar-features {
+    display: grid;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: #eef6ff;
+    font-size: 0.86rem;
+    line-height: 1.55;
+}
+
+.feature-item i {
+    margin-top: 3px;
+    color: #89e4b8;
+}
+
+/* FORMULARIO */
+
+.auth-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 44px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 520px;
+}
+
+.auth-header {
+    margin-bottom: 28px;
+}
+
+.auth-header h1,
+.auth-header h2 {
+    margin-top: 4px;
+    color: var(--text-dark);
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 3vw, 2.55rem);
+    line-height: 1.1;
+}
+
+.auth-subtitle {
+    margin-top: 12px;
+    color: var(--text-medium);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.auth-form {
+    display: grid;
+    gap: 18px;
+}
+
+/* LOGIN CENTRADO */
+
+.simple-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 68vh;
+}
+
+.central-box {
+    max-width: 520px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 26px;
+    background: var(--white);
+    box-shadow: var(--shadow-medium);
+}
+
+/* CAMPOS */
+
+.form-group-custom {
+    display: grid;
+    gap: 8px;
+}
+
+.form-group-custom label,
+.label-row label {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 48px 0 43px;
+    outline: none;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--background);
+    color: var(--text-dark);
+    font-size: 0.88rem;
+    transition: 0.22s ease;
+}
+
+.input-wrapper select {
+    appearance: none;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(7, 95, 211, 0.1);
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 1;
+    transform: translateY(-50%);
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.error-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    display: none;
+    transform: translateY(-50%);
+    color: #d64545;
+    font-size: 0.9rem;
+}
+
+.form-group-custom.invalid .input-wrapper input,
+.form-group-custom.invalid .input-wrapper select {
+    border-color: #d64545;
+    background: #fff7f7;
+    box-shadow: 0 0 0 4px rgba(214, 69, 69, 0.1);
+}
+
+.form-group-custom.invalid .error-icon {
+    display: block;
+}
+
+.error-text {
+    display: none;
+    color: #d64545;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.form-group-custom.invalid .error-text {
+    display: block;
+}
+
+/* CHECKBOX */
+
+.form-group-checkbox {
+    margin-top: 2px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkmark {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--background);
+    transition: 0.2s ease;
+}
+
+.checkbox-container input:checked + .checkmark {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    content: "";
+}
+
+.form-group-checkbox.invalid .checkmark {
+    border-color: #d64545;
+    background: #fff7f7;
+    box-shadow: 0 0 0 4px rgba(214, 69, 69, 0.1);
+}
+
+.form-group-checkbox.invalid .terms-label {
+    color: #b42318;
+}
+
+.terms-label {
+    color: var(--text-medium);
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+.terms-label a {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+/* BOTÓN DE VER CONTRASEÑA */
+
+.toggle-password-button {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+    border-radius: 9px;
+    background: transparent;
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.toggle-password-button:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+/* FUERZA DE CONTRASEÑA */
+
+.password-strength-meter {
+    display: none;
+    margin-top: 9px;
+}
+
+.meter-bar {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--border);
+}
+
+.meter-bar::before {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #d64545;
+    transition: 0.25s ease;
+    content: "";
+}
+
+.password-strength-meter.weak .meter-bar::before {
+    width: 35%;
+    background: #d64545;
+}
+
+.password-strength-meter.medium .meter-bar::before {
+    width: 65%;
+    background: var(--orange);
+}
+
+.password-strength-meter.strong .meter-bar::before {
+    width: 100%;
+    background: var(--green);
+}
+
+.meter-label {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-light);
+    font-size: 0.68rem;
+    font-weight: 700;
+}
+
+/* BOTÓN COMPLETO */
+
+.btn-block {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 6px;
+}
+
+/* CAMBIAR ENTRE LOGIN Y REGISTRO */
+
+.auth-switch-text {
+    margin-top: 4px;
+    text-align: center;
+    color: var(--text-medium);
+    font-size: 0.84rem;
+}
+
+.auth-switch-text a {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+/* LOGIN EXTRAS */
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.forgot-password {
+    color: var(--primary);
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+.auth-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 14px;
+    border-radius: 13px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.auth-alert.error {
+    border: 1px solid #ffd0d0;
+    background: #fff0f0;
+    color: #b42318;
+}
+
+/* OCULTAR ÍCONO NATIVO DEL NAVEGADOR */
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+}
+
+/* MODO OSCURO */
+
+body.dark-mode .auth-split-wrapper,
+body.dark-mode .auth-box,
+body.dark-mode .central-box {
+    background: var(--white);
+}
+
+body.dark-mode .input-wrapper input,
+body.dark-mode .input-wrapper select {
+    background: #111827;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 980px) {
+    .auth-split-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-sidebar {
+        min-height: auto;
+        padding: 34px;
+    }
+
+    .auth-form-container {
+        padding: 34px;
+    }
+}
+
+@media (max-width: 620px) {
+    .auth-container {
+        width: min(92%, 1180px);
+        padding: 38px 0 60px;
+    }
+
+    .auth-sidebar {
+        padding: 28px 22px;
+    }
+
+    .auth-form-container {
+        padding: 28px 20px;
+    }
+
+    .central-box {
+        padding: 28px 20px;
+    }
+
+    .auth-header h1,
+    .auth-header h2,
+    .auth-sidebar h1 {
+        font-size: 2rem;
+    }
+
+    .label-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* =======================================================
+   FINAL ACCESSIBILITY / CONTRAST FIXES | AUTH PAGES
+   SkillBridge
+======================================================= */
+
+.auth-body,
+.auth-container,
+.auth-split-wrapper,
+.auth-box,
+.central-box,
+.auth-form-container,
+.auth-sidebar,
+.form-group-custom,
+.form-group-checkbox,
+.input-wrapper,
+.checkbox-container,
+.auth-alert,
+.simple-alert-success,
+.password-strength-meter,
+.auth-switch-text,
+.sidebar-features,
+.feature-item {
+    max-width: 100%;
+}
+
+.auth-sidebar,
+.auth-box,
+.central-box,
+.auth-alert,
+.simple-alert-success,
+.form-group-custom,
+.form-group-checkbox,
+.auth-switch-text,
+.terms-label,
+.error-text,
+.meter-label {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    caret-color: var(--primary);
+}
+
+.input-wrapper input::placeholder {
+    color: var(--text-light);
+    opacity: 1;
+}
+
+.input-wrapper input:focus-visible,
+.input-wrapper select:focus-visible,
+.toggle-password-button:focus-visible,
+.checkbox-container input:focus-visible + .checkmark,
+.btn-block:focus-visible,
+.auth-switch-text a:focus-visible,
+.forgot-password:focus-visible,
+.terms-label a:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.form-group-custom.invalid .input-wrapper input,
+.form-group-custom.invalid .input-wrapper select,
+.form-group-checkbox.invalid .checkmark {
+    border-color: #d64545;
+}
+
+.form-group-custom.invalid .error-text,
+.form-group-checkbox.invalid .error-text {
+    display: block;
+}
+
+.auth-alert.success,
+.simple-alert-success {
+    border: 1px solid rgba(22, 163, 74, 0.28);
+    background: #dcfce7;
+    color: #166534;
+}
+
+.auth-alert.error {
+    border: 1px solid rgba(220, 38, 38, 0.34);
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+body.dark-mode .auth-body {
+    background:
+        radial-gradient(circle at 10% 12%, rgba(96, 165, 250, 0.12), transparent 25%),
+        radial-gradient(circle at 90% 10%, rgba(122, 90, 248, 0.10), transparent 22%),
+        var(--background);
+}
+
+body.dark-mode .auth-split-wrapper,
+body.dark-mode .auth-box,
+body.dark-mode .central-box {
+    background: var(--white);
+    border-color: var(--border);
+}
+
+body.dark-mode .auth-header h1,
+body.dark-mode .auth-header h2,
+body.dark-mode .form-group-custom label,
+body.dark-mode .label-row label {
+    color: var(--text-dark);
+}
+
+body.dark-mode .auth-subtitle,
+body.dark-mode .terms-label,
+body.dark-mode .auth-switch-text,
+body.dark-mode .meter-label {
+    color: var(--text-medium);
+}
+
+body.dark-mode .input-wrapper input,
+body.dark-mode .input-wrapper select {
+    border-color: var(--border);
+    background: #111827;
+    color: var(--text-dark);
+}
+
+body.dark-mode .input-wrapper input::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .toggle-password-button:hover {
+    background: var(--primary-light);
+}
+
+body.dark-mode .form-group-custom.invalid .input-wrapper input,
+body.dark-mode .form-group-custom.invalid .input-wrapper select {
+    border-color: #fca5a5;
+    background: #2a1518;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.18);
+}
+
+body.dark-mode .form-group-checkbox.invalid .checkmark {
+    border-color: #fca5a5;
+    background: #2a1518;
+}
+
+body.dark-mode .auth-alert.error {
+    border-color: #fca5a5;
+    background: #2a1518;
+    color: #fecaca;
+}
+
+body.dark-mode .auth-alert.success,
+body.dark-mode .simple-alert-success {
+    border-color: #86efac;
+    background: #12351f;
+    color: #bbf7d0;
+}
+
+body.high-contrast .auth-body,
+body.high-contrast .auth-container {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .auth-split-wrapper,
+body.high-contrast .auth-box,
+body.high-contrast .central-box,
+body.high-contrast .form-group-custom,
+body.high-contrast .auth-alert,
+body.high-contrast .simple-alert-success {
+    border-color: #facc15 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+body.high-contrast .auth-sidebar {
+    border-right: 2px solid #facc15;
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .auth-sidebar::before,
+body.high-contrast .auth-sidebar::after {
+    display: none;
+}
+
+body.high-contrast .auth-badge,
+body.high-contrast .feature-item,
+body.high-contrast .auth-sidebar p,
+body.high-contrast .auth-subtitle,
+body.high-contrast .auth-switch-text,
+body.high-contrast .terms-label,
+body.high-contrast .meter-label,
+body.high-contrast .error-text,
+body.high-contrast .forgot-password,
+body.high-contrast .terms-label a,
+body.high-contrast .auth-switch-text a {
+    color: #ffffff !important;
+}
+
+body.high-contrast .auth-header h1,
+body.high-contrast .auth-header h2,
+body.high-contrast .auth-sidebar h1,
+body.high-contrast .form-group-custom label,
+body.high-contrast .label-row label {
+    color: #ffffff !important;
+}
+
+body.high-contrast .input-wrapper input,
+body.high-contrast .input-wrapper select,
+body.high-contrast .checkmark {
+    border: 2px solid #facc15 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+body.high-contrast .input-wrapper input::placeholder {
+    color: #ffffff !important;
+    opacity: 0.85;
+}
+
+body.high-contrast .input-icon,
+body.high-contrast .toggle-password-button,
+body.high-contrast .feature-item i,
+body.high-contrast .error-icon {
+    color: #facc15 !important;
+}
+
+body.high-contrast .toggle-password-button:hover,
+body.high-contrast .toggle-password-button:focus-visible,
+body.high-contrast .checkbox-container input:checked + .checkmark {
+    background: #facc15 !important;
+    color: #000000 !important;
+}
+
+body.high-contrast .checkbox-container input:checked + .checkmark::after {
+    border-color: #000000 !important;
+}
+
+body.high-contrast .form-group-custom.invalid .input-wrapper input,
+body.high-contrast .form-group-custom.invalid .input-wrapper select,
+body.high-contrast .form-group-checkbox.invalid .checkmark {
+    border-color: #ffffff !important;
+    background: #000000 !important;
+}
+
+body.high-contrast .auth-alert.error,
+body.high-contrast .auth-alert.success,
+body.high-contrast .simple-alert-success {
+    border: 2px solid #facc15 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .meter-bar {
+    border: 1px solid #facc15;
+    background: #000000;
+}
+
+body.high-contrast .meter-bar::before,
+body.high-contrast .password-strength-meter.weak .meter-bar::before,
+body.high-contrast .password-strength-meter.medium .meter-bar::before,
+body.high-contrast .password-strength-meter.strong .meter-bar::before {
+    background: #facc15 !important;
+}
+
+body.high-contrast .btn-block,
+body.high-contrast .button,
+body.high-contrast button[type="submit"] {
+    border: 2px solid #facc15 !important;
+}
+
+body.reader-mode-enabled .auth-sidebar,
+body.reader-mode-enabled .auth-split-wrapper,
+body.reader-mode-enabled .central-box,
+body.reader-mode-enabled .auth-box {
+    transform: none !important;
+    animation: none !important;
+}
+
+body.reader-mode-enabled .auth-sidebar p,
+body.reader-mode-enabled .auth-subtitle,
+body.reader-mode-enabled .terms-label,
+body.reader-mode-enabled .auth-switch-text,
+body.reader-mode-enabled .feature-item {
+    line-height: 1.9;
+}
+
+@media (max-width: 620px) {
+    .auth-container {
+        padding-top: 28px;
+    }
+
+    .auth-split-wrapper,
+    .central-box {
+        border-radius: 20px;
+    }
+
+    .auth-form {
+        gap: 16px;
+    }
+
+    .input-wrapper input,
+    .input-wrapper select,
+    .btn-block {
+        min-height: 54px;
+    }
+
+    .checkbox-container {
+        align-items: flex-start;
+    }
+}
+

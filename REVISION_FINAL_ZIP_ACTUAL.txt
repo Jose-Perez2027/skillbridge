@@ -1,0 +1,37 @@
+SKILLBRIDGE - REVISION FINAL SOBRE ZIP ACTUAL
+
+Base revisada:
+- skillbridge1(2).zip enviado por el usuario.
+
+Cambios aplicados:
+1. Se reparó el footer de forma estructural:
+   - Se creó includes/footer.php.
+   - Todas las páginas principales ahora usan el mismo footer.
+   - Esto evita que una página tenga footer completo y otra footer incompleto.
+
+2. Se limpió css/style.css:
+   - Se quitaron parches duplicados del footer.
+   - Se dejó un único bloque final de footer compacto.
+   - Se corrigió el alto contraste del footer.
+   - Se corrigió el skip link para que no aparezca siempre.
+   - Se agregó protección contra desbordes horizontales.
+
+3. Se corrigió api/preferencias.php:
+   - Ya no reinicia idioma a inglés cuando solo se guardan modo oscuro, contraste, lectura o tamaño.
+   - Guarda idioma en sesión y cookie.
+
+4. Se corrigieron errores de nombre de función:
+   - Se reemplazó limpar() por limpiar() en los archivos donde había quedado el error.
+   - Esto evitaba fallos de ejecución en empleos.php y registro.php.
+
+5. Cache busting:
+   - Se agregó versión a CSS/JS locales para evitar que el navegador cargue archivos viejos.
+
+Pruebas realizadas:
+- php -l en todos los archivos PHP: OK.
+- node --check en todos los JS: OK.
+- Revisión de llaves CSS balanceadas: OK.
+
+Nota:
+- No se tocó config/conexion.php.
+- No se borraron imágenes ni CV.
